@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@microsoft/mgt-react':
-    specifier: ^3.0.0
-    version: 3.0.0(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^2.11.2
+    version: 2.11.2
   plasmo:
     specifier: 0.79.0
     version: 0.79.0(react-dom@18.2.0)(react@18.2.0)
@@ -520,14 +520,14 @@ packages:
       cross-spawn: 7.0.3
     dev: false
 
-  /@fluentui/web-components@2.5.15:
-    resolution: {integrity: sha512-qUbO2iHqh+E9qquHdXiRX1/mRrB5NzxwOBxdKhdQPXnffTxiqJU/m6h2FaEPeZXaPPrQiR4lXrVPCRCT5D082g==}
+  /@fluentui/web-components@0.22.1:
+    resolution: {integrity: sha512-dnMgBRC2vXPa8Br2DpoJG9Fj+WNDlOEtJPzXDiDZss3ddnhsd1djzOEaHoYWayqYumA6ZU2tet5qaqF2i2lqOQ==}
     dependencies:
       '@microsoft/fast-colors': 5.3.1
       '@microsoft/fast-element': 1.12.0
-      '@microsoft/fast-foundation': 2.49.0
-      '@microsoft/fast-web-utilities': 5.4.1
-      tslib: 2.6.0
+      '@microsoft/fast-foundation': 1.24.8(lodash-es@4.17.21)
+      lodash-es: 4.17.21
+      tslib: 1.14.1
     dev: false
 
   /@jridgewell/gen-mapping@0.3.3:
@@ -566,16 +566,6 @@ packages:
     resolution: {integrity: sha512-bM6oE6VQZ6hIFxDNKk8bKPa14hqFrV07J/vHGOeiAbJReIaQXmkVb6xQu4MR+JBTLa5arGRyAAjJe1qaQt3Uvg==}
     dependencies:
       '@lezer/common': 0.15.12
-    dev: false
-
-  /@lit-labs/ssr-dom-shim@1.1.1:
-    resolution: {integrity: sha512-kXOeFbfCm4fFf2A3WwVEeQj55tMZa8c8/f9AKHMobQMkzNUfUj+antR3fRPaZJawsa1aZiP/Da3ndpZrwEe4rQ==}
-    dev: false
-
-  /@lit/reactive-element@1.6.2:
-    resolution: {integrity: sha512-rDfl+QnCYjuIGf5xI2sVJWdYIi56CTCwWa+nidKYX6oIuBYwUbT/vX4qbUDlHiZKJ/3FRNQ/tWJui44p6/stSA==}
-    dependencies:
-      '@lit-labs/ssr-dom-shim': 1.1.1
     dev: false
 
   /@lmdb/lmdb-darwin-arm64@2.7.11:
@@ -634,98 +624,83 @@ packages:
     resolution: {integrity: sha512-gQutuDHPKNxUEcQ4pypZT4Wmrbapus+P9s3bR/SEOLsMbNqNoXigGImITygI5zhb+aA5rzflM6O8YWkmRbGkPA==}
     dev: false
 
-  /@microsoft/fast-foundation@2.49.0:
-    resolution: {integrity: sha512-Wk4e4QXFVtT5hPwhMfHyGY30kixM0td8aDs7bAD6NM2z2SCBNvpTTWp+FCjx0I0lpUMlMenb6wsw7pMWQreRkQ==}
+  /@microsoft/fast-foundation@1.24.8(lodash-es@4.17.21):
+    resolution: {integrity: sha512-n4O9jPh8BBliF/Yl9FAVhrSoopsRCnva2L432s/fHwLelY9WUeswjO3DidVBFbzXD5u/gzC4LGWJScNe/ZGU4Q==}
     dependencies:
       '@microsoft/fast-element': 1.12.0
-      '@microsoft/fast-web-utilities': 5.4.1
+      '@microsoft/fast-web-utilities': 4.8.1(lodash-es@4.17.21)
+      '@microsoft/tsdoc-config': 0.13.9
       tabbable: 5.3.3
+      tslib: 1.14.1
+    transitivePeerDependencies:
+      - lodash-es
+    dev: false
+
+  /@microsoft/fast-web-utilities@4.8.1(lodash-es@4.17.21):
+    resolution: {integrity: sha512-P3xeyUwQ9nPkFrgAdmkOzaXxIq8YqMU5K+LXcoHgJddJCBCKfGWW9OZQOTigLddItTyVyfO8qsJpDQb1TskKHA==}
+    peerDependencies:
+      lodash-es: ^4.17.10
+    dependencies:
+      exenv-es6: 1.1.1
+      lodash-es: 4.17.21
+    dev: false
+
+  /@microsoft/mgt-components@2.11.2:
+    resolution: {integrity: sha512-6sEC0hOyvY4aqHAavFQnktYBgGs0Gi44K1ZU9fExXaIAgLCNNQZR4Vi+KMVe/iRY7ZRV6v56PHWUUH0tmb/aXw==}
+    dependencies:
+      '@fluentui/web-components': 0.22.1
+      '@microsoft/mgt-element': 2.11.2
+      '@microsoft/microsoft-graph-client': 2.2.1
+      '@microsoft/microsoft-graph-types': 2.35.0
+      '@microsoft/microsoft-graph-types-beta': 0.16.0-preview
+      office-ui-fabric-core: 11.0.0
+    dev: false
+
+  /@microsoft/mgt-element@2.11.2:
+    resolution: {integrity: sha512-5/E60WKh6hxeld5EoIS9Ha7Ivzsx6AXp/IvGegFTOuCWZFJd8lfgu9V7nh9KiG4MZN1xE2Uyc1pNiPmTDMJaZQ==}
+    dependencies:
+      '@microsoft/microsoft-graph-client': 2.2.1
+      idb: 6.0.0
+      lit-element: 2.5.1
+    dev: false
+
+  /@microsoft/mgt-react@2.11.2:
+    resolution: {integrity: sha512-EewROk5KvV8JKoy4eTsgX3RNjfYbGrb45Z0i6cx7eQFb1g2rdonwMoPW7Z4pHNAUj+Vco6d9kJGzV9gWGx/9Kw==}
+    dependencies:
+      '@microsoft/mgt-components': 2.11.2
+      '@microsoft/mgt-element': 2.11.2
+      '@microsoft/microsoft-graph-types': 2.35.0
+      '@microsoft/microsoft-graph-types-beta': 0.16.0-preview
+      wc-react: 0.5.1
+    dev: false
+
+  /@microsoft/microsoft-graph-client@2.2.1:
+    resolution: {integrity: sha512-fbDN3UJ+jtSP9llAejqmslMcv498YuIrS3OS/Luivb8OSjdUESZKdP0gcUunnuNIayePVT0/bGYSJTzAIptJQQ==}
+    dependencies:
+      '@babel/runtime': 7.22.6
+      msal: 1.4.18
       tslib: 1.14.1
     dev: false
 
-  /@microsoft/fast-web-utilities@5.4.1:
-    resolution: {integrity: sha512-ReWYncndjV3c8D8iq9tp7NcFNc1vbVHvcBFPME2nNFKNbS1XCesYZGlIlf3ot5EmuOXPlrzUHOWzQ2vFpIkqDg==}
-    dependencies:
-      exenv-es6: 1.1.1
-    dev: false
-
-  /@microsoft/mgt-components@3.0.0:
-    resolution: {integrity: sha512-1TotBQOBXPb7nzU+d7XYTYap2M4AaM4ANJqE4sUPfaUqL20cU0C72pxy1f13lggr7wus0fHLSX/1wDriBFU6+A==}
-    dependencies:
-      '@fluentui/web-components': 2.5.15
-      '@microsoft/mgt-element': 3.0.0
-      '@microsoft/microsoft-graph-client': 3.0.2
-      '@microsoft/microsoft-graph-types': 2.35.0
-      '@microsoft/microsoft-graph-types-beta': 0.29.0-preview
-      office-ui-fabric-core: 11.1.0
-    transitivePeerDependencies:
-      - '@azure/identity'
-      - '@azure/msal-browser'
-      - buffer
-      - stream-browserify
-    dev: false
-
-  /@microsoft/mgt-element@3.0.0:
-    resolution: {integrity: sha512-8c1juTfSrOLhBQ9BwhHrCda2KF/q0CRn4/2YDVxE7OrEZG5L0lWJPL0gaBqgqQatG0rAOuZgeZwo6bM/xYt5/Q==}
-    dependencies:
-      '@microsoft/microsoft-graph-client': 3.0.2
-      idb: 6.0.0
-      lit: 2.7.6
-    transitivePeerDependencies:
-      - '@azure/identity'
-      - '@azure/msal-browser'
-      - buffer
-      - stream-browserify
-    dev: false
-
-  /@microsoft/mgt-react@3.0.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-wXyvwRqlksDwyC9krgnnCuAXFcqKEkwnEr7MqKTOBOkUZIJQO/wLpLVCgif4vqdULs6OOIWdN86BRzpYIipS6g==}
-    peerDependencies:
-      react: ^17.0.1 || ^18.0.0
-      react-dom: ^17.0.1 || ^18.0.0
-    dependencies:
-      '@microsoft/mgt-components': 3.0.0
-      '@microsoft/mgt-element': 3.0.0
-      '@microsoft/microsoft-graph-types': 2.35.0
-      '@microsoft/microsoft-graph-types-beta': 0.29.0-preview
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      wc-react: 0.5.1
-    transitivePeerDependencies:
-      - '@azure/identity'
-      - '@azure/msal-browser'
-      - buffer
-      - stream-browserify
-    dev: false
-
-  /@microsoft/microsoft-graph-client@3.0.2:
-    resolution: {integrity: sha512-eYDiApYmiGsm1s1jfAa/rhB2xQCsX4pWt0vCTd1LZmiApMQfT/c0hXj2hvpuGz5GrcLdugbu05xB79rIV57Pjw==}
-    engines: {node: '>=12.0.0'}
-    peerDependencies:
-      '@azure/identity': '*'
-      '@azure/msal-browser': '*'
-      buffer: '*'
-      stream-browserify: '*'
-    peerDependenciesMeta:
-      '@azure/identity':
-        optional: true
-      '@azure/msal-browser':
-        optional: true
-      buffer:
-        optional: true
-      stream-browserify:
-        optional: true
-    dependencies:
-      '@babel/runtime': 7.22.6
-      tslib: 2.6.0
-    dev: false
-
-  /@microsoft/microsoft-graph-types-beta@0.29.0-preview:
-    resolution: {integrity: sha512-83PCHDH7GxW8KM1J+MM6FPbaahIuj7VIgnY4UbMGQkkq2fBaHeKOmgjVbohvLVeIOOCTLmorPh6JtXH0VtFurA==}
+  /@microsoft/microsoft-graph-types-beta@0.16.0-preview:
+    resolution: {integrity: sha512-73d1b8pv8YnKx+oiQtMZDSey4ohmx/cfM/vFiAa5ZyLSj4nr9y/7wIT5jTIO+tkdniyBsfN/QQeDiRwyutcxAQ==}
     dev: false
 
   /@microsoft/microsoft-graph-types@2.35.0:
     resolution: {integrity: sha512-3jCQyKaYbNuzVG884SNuWKS19FPUxBwHfDAb3DqZWBwPYcX3HbDe2D22z9Ue+UV+JGuw917cH75RTSgrdnutFg==}
+    dev: false
+
+  /@microsoft/tsdoc-config@0.13.9:
+    resolution: {integrity: sha512-VqqZn+rT9f6XujFPFR2aN9XKF/fuir/IzKVzoxI0vXIzxysp4ee6S2jCakmlGFHEasibifFTsJr7IYmRPxfzYw==}
+    dependencies:
+      '@microsoft/tsdoc': 0.12.24
+      ajv: 6.12.6
+      jju: 1.4.0
+      resolve: 1.19.0
+    dev: false
+
+  /@microsoft/tsdoc@0.12.24:
+    resolution: {integrity: sha512-Mfmij13RUTmHEMi9vRUhMXD7rnGR2VvxeNYtaGtaJ4redwwjT4UXYJ+nzmVJF7hhd4pn/Fx5sncDKxMVFJSWPg==}
     dev: false
 
   /@mischnic/json-sourcemap@0.1.0:
@@ -2537,10 +2512,6 @@ packages:
     resolution: {integrity: sha512-5cJ8CB4yAx7BH1oMvdU0Jh9lrEXyPkar6F9G/ERswkCuvP4KQZfZkSjcMbAICCpQTN4OuZn8tz0HiKv9TGZgrQ==}
     dev: true
 
-  /@types/trusted-types@2.0.3:
-    resolution: {integrity: sha512-NfQ4gyz38SL8sDNrSixxU2Os1a5xcdFxipAFxYEuLUlvU2uDwS4NUpsImcf1//SlWItCVMMLiylsxbmNMToV/g==}
-    dev: false
-
   /@vue/compiler-core@3.3.4:
     resolution: {integrity: sha512-cquyDNvZ6jTbf/+x+AgM2Arrp6G4Dzbb0R64jiG804HRMfRiFXWI6kqUVqZ6ZR0bQhIoQjB4+2bhNtVwndW15g==}
     dependencies:
@@ -2632,6 +2603,15 @@ packages:
     resolution: {integrity: sha512-F0SAmZ8iUtS//m8DmCTA0jlh6TDKkHQyK6xc6V4KDTyZKA9dnvX9/3sRTVQrWm79glUAZbnmmNcdYwUIHWVybw==}
     engines: {node: '>=0.4.0'}
     hasBin: true
+    dev: false
+
+  /ajv@6.12.6:
+    resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
+    dependencies:
+      fast-deep-equal: 3.1.3
+      fast-json-stable-stringify: 2.1.0
+      json-schema-traverse: 0.4.1
+      uri-js: 4.4.1
     dev: false
 
   /ansi-escapes@4.3.2:
@@ -3344,6 +3324,10 @@ packages:
       tmp: 0.0.33
     dev: false
 
+  /fast-deep-equal@3.1.3:
+    resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
+    dev: false
+
   /fast-glob@3.2.12:
     resolution: {integrity: sha512-DVj4CQIYYow0BlaelwK1pHl5n5cRSJfM60UA0zK891sVInoPri2Ekj7+e1CT3/3qxXenpI+nBBmQAcJPJgaj4w==}
     engines: {node: '>=8.6.0'}
@@ -3353,6 +3337,10 @@ packages:
       glob-parent: 5.1.2
       merge2: 1.4.1
       micromatch: 4.0.5
+    dev: false
+
+  /fast-json-stable-stringify@2.1.0:
+    resolution: {integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==}
     dev: false
 
   /fastq@1.15.0:
@@ -3409,6 +3397,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /function-bind@1.1.1:
+    resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
+    dev: false
 
   /gensync@1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
@@ -3529,6 +3521,13 @@ packages:
   /has-flag@4.0.0:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
+    dev: false
+
+  /has@1.0.3:
+    resolution: {integrity: sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==}
+    engines: {node: '>= 0.4.0'}
+    dependencies:
+      function-bind: 1.1.1
     dev: false
 
   /header-case@2.0.4:
@@ -3698,6 +3697,12 @@ packages:
       binary-extensions: 2.2.0
     dev: false
 
+  /is-core-module@2.12.1:
+    resolution: {integrity: sha512-Q4ZuBAe2FUsKtyQJoQHlvP8OvBERxO3jEmy1I7hcRXcJBGGHFh/aJBswbXuS9sgrDH2QUO8ilkwNPHvHMd8clg==}
+    dependencies:
+      has: 1.0.3
+    dev: false
+
   /is-extglob@2.1.1:
     resolution: {integrity: sha512-SbKbANkN603Vi4jEZv49LeVJMn4yGwsbzZworEoyEiutsN3nJYdbO36zfhGJ6QEDpOZIFkDtnq5JRxmvl3jsoQ==}
     engines: {node: '>=0.10.0'}
@@ -3777,6 +3782,10 @@ packages:
     resolution: {integrity: sha512-nO6jcEfZWQXDhOiBtG2KvKyEptz7RVbpGP4vTD2hLBdmNQSsCiicO2Ioinv6UI4y9ukqnBpy+XZ9H6uLNgJTlw==}
     dev: true
 
+  /jju@1.4.0:
+    resolution: {integrity: sha512-8wb9Yw966OSxApiCt0K3yNJL8pnNeIv+OEq2YMidz4FKP6nonSRoOXc80iXY4JaN2FC11B9qsNmDsm+ZOfMROA==}
+    dev: false
+
   /joycon@3.1.1:
     resolution: {integrity: sha512-34wB/Y7MW7bzjKRjUKTa46I2Z7eV62Rkhva+KkopW7Qvv/OSWBqvkSY7vusOPrNuZcUG3tApvdVgNB8POj3SPw==}
     engines: {node: '>=10'}
@@ -3812,6 +3821,10 @@ packages:
       '@babel/runtime': 7.22.6
       '@types/json-schema': 7.0.12
       ts-algebra: 1.2.0
+    dev: false
+
+  /json-schema-traverse@0.4.1:
+    resolution: {integrity: sha512-xbbCH5dCYU5T8LcEhhuh7HJ88HXuW3qsI3Y0zOZFKfZEHcpWiHU/Jxzk629Brsab/mMiHQti9wMP+845RPe3Vg==}
     dev: false
 
   /json5@2.2.3:
@@ -4038,26 +4051,14 @@ packages:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: false
 
-  /lit-element@3.3.2:
-    resolution: {integrity: sha512-xXAeVWKGr4/njq0rGC9dethMnYCq5hpKYrgQZYTzawt9YQhMiXfD+T1RgrdY3NamOxwq2aXlb0vOI6e29CKgVQ==}
+  /lit-element@2.5.1:
+    resolution: {integrity: sha512-ogu7PiJTA33bEK0xGu1dmaX5vhcRjBXCFexPja0e7P7jqLhTpNKYRPmE+GmiCaRVAbiQKGkUgkh/i6+bh++dPQ==}
     dependencies:
-      '@lit-labs/ssr-dom-shim': 1.1.1
-      '@lit/reactive-element': 1.6.2
-      lit-html: 2.7.5
+      lit-html: 1.4.1
     dev: false
 
-  /lit-html@2.7.5:
-    resolution: {integrity: sha512-YqUzpisJodwKIlbMFCtyrp58oLloKGnnPLMJ1t23cbfIJjg/H9pvLWK4XS69YeubK5HUs1UE4ys9w5dP1zg6IA==}
-    dependencies:
-      '@types/trusted-types': 2.0.3
-    dev: false
-
-  /lit@2.7.6:
-    resolution: {integrity: sha512-1amFHA7t4VaaDe+vdQejSVBklwtH9svGoG6/dZi9JhxtJBBlqY5D1RV7iLUYY0trCqQc4NfhYYZilZiVHt7Hxg==}
-    dependencies:
-      '@lit/reactive-element': 1.6.2
-      lit-element: 3.3.2
-      lit-html: 2.7.5
+  /lit-html@1.4.1:
+    resolution: {integrity: sha512-B9btcSgPYb1q4oSOb/PrOT6Z/H+r6xuNzfH4lFli/AWhYwdtrgQkQWBbIc6mdnf6E2IL3gDXdkkqNktpU0OZQA==}
     dev: false
 
   /lmdb@2.7.11:
@@ -4086,6 +4087,10 @@ packages:
 
   /locate-character@3.0.0:
     resolution: {integrity: sha512-SW13ws7BjaeJ6p7Q6CO2nchbYEc3X3J6WrmTTDto7yMPqVSZTUyY5Tjbid+Ab8gLnATtygYtiDIJGQRRn2ZOiA==}
+    dev: false
+
+  /lodash-es@4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
     dev: false
 
   /lodash.clone@4.5.0:
@@ -4239,6 +4244,13 @@ packages:
     dev: false
     optional: true
 
+  /msal@1.4.18:
+    resolution: {integrity: sha512-QyWMWrZqpwtK6LEqhwtbikxIWqA1EOcdMvDeIDjIXdGU29wM4orwq538sPe1+JfKDIgPmJj1Fgi5B7luaw/IyA==}
+    engines: {node: '>=0.8.0'}
+    dependencies:
+      tslib: 1.14.1
+    dev: false
+
   /msgpackr-extract@3.0.2:
     resolution: {integrity: sha512-SdzXp4kD/Qf8agZ9+iTu6eql0m3kWm1A2y1hkpTeVNENutaB0BwHlSvAIaMxwntmRUAUjon2V4L8Z/njd0Ct8A==}
     hasBin: true
@@ -4386,8 +4398,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /office-ui-fabric-core@11.1.0:
-    resolution: {integrity: sha512-uV7CbMBAqbHRa7ihNlgbDMIdiKb49TCamhsfuK7Yx7JXx05WdN/lZPWLmPnAALVQAFuO95ZJMAwNjyyEeXk47A==}
+  /office-ui-fabric-core@11.0.0:
+    resolution: {integrity: sha512-K6+KGnBXXjfSxxZpp+4oDXVLgUc//7OnXrn8F08VoJnGhEz27WUf4ZuMa32SjGoqirWlb4JlKkXbOpC9cis6dQ==}
     dev: false
 
   /once@1.4.0:
@@ -4493,6 +4505,10 @@ packages:
   /path-key@3.1.1:
     resolution: {integrity: sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==}
     engines: {node: '>=8'}
+    dev: false
+
+  /path-parse@1.0.7:
+    resolution: {integrity: sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==}
     dev: false
 
   /path-type@4.0.0:
@@ -4826,6 +4842,13 @@ packages:
   /resolve-from@5.0.0:
     resolution: {integrity: sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==}
     engines: {node: '>=8'}
+    dev: false
+
+  /resolve@1.19.0:
+    resolution: {integrity: sha512-rArEXAgsBG4UgRGcynxWIWKFvh/XZCcS8UJdHhwy91zwAvCZIbcs+vAbflgBnNjYMs/i/i+/Ux6IZhML1yPvxg==}
+    dependencies:
+      is-core-module: 2.12.1
+      path-parse: 1.0.7
     dev: false
 
   /responselike@3.0.0:
@@ -5317,6 +5340,12 @@ packages:
     resolution: {integrity: sha512-KgdgDGJt2TpuwBUIjgG6lzw2GWFRCW9Qkfkiv0DxqHHLYJHmtmdUIKcZd8rHgFSjopVTlw6ggzCm1b8MFQwikg==}
     dependencies:
       tslib: 2.6.0
+    dev: false
+
+  /uri-js@4.4.1:
+    resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
+    dependencies:
+      punycode: 2.3.0
     dev: false
 
   /util-deprecate@1.0.2:
